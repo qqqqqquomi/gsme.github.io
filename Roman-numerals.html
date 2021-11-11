@@ -29,7 +29,7 @@ function romanNumber(num) {
 function outputNumber() {
 	currentNumber = Math.min(1 + t/5 + t**3/1000000000, 999)
 	document.getElementById("number1").innerHTML = Math.floor(currentNumber);
-	document.getElementById("number2").innerHTML = romanNumber(currentNumber);
+	document.getElementById("number2").innerHTML = var g(currentNumber);
 	t++;
 }
 setInterval(outputNumber, 50);
