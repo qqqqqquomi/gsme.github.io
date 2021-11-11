@@ -15,15 +15,15 @@ var h = '</span>';
 currentNumber = Math.floor(currentNumber);
 
 function romanNumber(num) {
-	if (num > 3999999 || num < 0) {
+	if (num > 399999999 || num < 0) {
 		return "";
 	} else {
-	return g+thousands[Math.floor(num/1000000)%10]+h +
-	g+hundreds[Math.floor(num/100000)%10]+h +
-	g+tens[Math.floor(num/10000)%10]+h +
-	thousands[Math.floor(num/1000)%10].replace(/v/g,g+"V"+h).replace(/0/g,g+"X"+h) +
-	hundreds[Math.floor(num/100)%10] +
-	tens[Math.floor(num/10)%10] + ones[Math.floor(num)%10];
+	return g+thousands[Math.floor(num/10000)%10]+h +
+	g+hundreds[Math.floor(num/1000)%10]+h +
+	g+tens[Math.floor(num/100)%10]+h +
+	thousands[Math.floor(num/10)%10].replace(/v/g,g+"V"+h).replace(/0/g,g+"X"+h) +
+	hundreds[Math.floor(num/10)%10] +
+	tens[Math.floor(num/1)%10] + ones[Math.floor(num)%10];
 	}
 }
 function outputNumber() {
