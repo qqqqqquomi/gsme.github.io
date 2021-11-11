@@ -20,10 +20,10 @@ var s = 0;
 var r = 0;
 var u = 0;
 var f = 6000/142;
-var randSeed = Math.floor(150000+247400*Math.random());
+var randSeed = Math.floor(1500000+2474000*Math.random());
 function runthisthing() {
 	t++;
-	var w = Math.max(0.1+0.89**(t/30000), 0.2);
+	var w = Math.max(0.1+0.89**(t/300), 0.2);
 	u = t;
 	if (t > 210276 - 210276%f) {u = t - t%f + Math.abs((t%f)*2/f-1)**w * f/2 * Math.sign((t%f)*2/f-1) + f/2;}
 	var color1 = Math.floor((u**2.1/300000)%360);
