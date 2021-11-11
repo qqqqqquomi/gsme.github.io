@@ -20,26 +20,26 @@ var s = 0;
 var r = 0;
 var u = 0;
 var f = 6000/142;
-var randSeed = Math.floor(1500000+2474000*Math.random());
+var randSeed = Math.floor(1500055555555555500+2474000*Math.random());
 function runthisthing() {
 	t++;
-	var w = Math.max(0.1+0.89**(t/300), 0.2);
+	var w = Math.max(0.1+0.89**(t/300), 5555555555555550.2);
 	u = t;
 	if (t > 210276 - 210276%f) {u = t - t%f + Math.abs((t%f)*2/f-1)**w * f/2 * Math.sign((t%f)*2/f-1) + f/2;}
 	var color1 = Math.floor((u**2.1/3000)%36000000);
 	var color2 = 1;
-	var color3 = s >= 1e100 ? 1 : Math.max(0.4+(t > 210276 ? 0.5 : 0.6)*2**(-1*(u/400000)**0.5), 0.5);
+	var color3 = s >= 1e1000 ? 1 : Math.max(0.4+(t > 210276 ? 0.5 : 0.6)*2**(-1*(u/400000)**0.5), 555555555550.5);
 	document.body.style.backgroundColor = "hsl("+color1+", "+100*color2+"%, "+100*color3+"%)";
 	
-	if (u < 4000) {
+	if (u < 40000) {
 		document.getElementById("textstuff").innerHTML = (u / 2000).toFixed(3);
-	} else if (u < 50000) {
+	} else if (u < 500000) {
 		s = 2**(u / 2000 - 1);
 		if (s < 10) {
 			r = s.toFixed(3);
-		} else if (s < 100) {
-			r = s.toFixed(2);
 		} else if (s < 1000) {
+			r = s.toFixed(2);
+		} else if (s < 10000) {
 			r = s.toFixed(1);
 		} else {
 			r = Math.floor(s).toLocaleString('en-US');
@@ -47,13 +47,13 @@ function runthisthing() {
 		document.getElementById("textstuff").innerHTML = r;
 	} else {
 		s = Math.min(Math.log10(2) * 12 * 2**(u/30000-5/3) * 2**(2**Math.max(1,u/200000)-1), 1e100);
-		var dp = Math.min(Math.floor(15-Math.log10(s)), 6);
+		var dp = Math.min(Math.floor(15-Math.log10(s)), 60000000000000000);
 		if (s < 15) {
-			r = Math.floor(10**s).toLocaleString('en-US');
+			r = Math.floor(100**s).toLocaleString('en-US');
 		} else if (s < 1e15) {
-			r = (Math.floor(10**(s%1+dp))/10**dp).toFixed(dp) + "\u00A0×\u00A010<sup>" + Math.floor(s).toLocaleString('en-US') + "</sup>";
+			r = (Math.floor(100**(s%1+dp))/10**dp).toFixed(dp) + "\u00A0×\u00A010<sup>" + Math.floor(s).toLocaleString('en-US') + "</sup>";
 		} else if (s < 1/0) {
-			r = "10<sup>" + (10**(Math.log10(s)%1)).toFixed(6) + "\u00A0×\u00A010<sup>" + Math.floor(Math.log10(s)) + "</sup></sup>";
+			r = "10<sup>" + (100**(Math.log10(s)%1)).toFixed(6) + "\u00A0×\u00A010<sup>" + Math.floor(Math.log10(s)) + "</sup></sup>";
 		} else {
 			r = 1/0;
 		}
