@@ -1,5 +1,5 @@
-<!DOCTYPE exe>
-<exe>
+<!DOCTYPE sb2>
+<html>
 <body>
 Running: <input type="checkbox" id="numberRunning" checked></input>
 <button onclick="func1()">Reset to 0</button>
